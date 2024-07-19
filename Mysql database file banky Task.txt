@@ -1,0 +1,8 @@
+create database banking;
+show databases;
+use banking;
+
+create table existingcustomer(accountno varchar(30),name varchar(30),mobileno varchar(10),tpin int,DepositAmount int,deposit int,
+withdraw int,AmountTransfer int,TotalAmount int generated always as (DepositAmount +deposit-withdraw-AmountTransfer));
+
+select *from existingcustomer;
